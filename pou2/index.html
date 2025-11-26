@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Pou</title>
+
+    <link rel="stylesheet" href="css/bars.css">
+    <link rel="stylesheet" href="css/casino.css">
+    <link rel="stylesheet" href="css/fiko.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/stats.css">
+</head>
+
+<body>
+
+    <div id="gameUI">
+        <!-- HEALTH BAR -->
+        <div id="statsContainer">
+            <!-- HEALTH BAR -->
+            <div class="stat">
+                <span>Health</span>
+                <div class="bar-bg">
+                    <div id="healthBar" class="bar-fill">
+                        <span class="bar-value" id="healthValue">100%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HUNGER BAR -->
+            <div class="stat">
+                <span>Hunger</span>
+                <div class="bar-bg">
+                    <div id="hungerBar" class="bar-fill">
+                        <span class="bar-value" id="hungerValue">100%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CORRUPTION BAR -->
+            <div class="stat">
+                <span>Corruption</span>
+                <div class="bar-bg">
+                    <div id="corruptionBar" class="bar-fill">
+                        <span class="bar-value" id="corruptionValue">100%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="character-container">
+            <img src="fiko.png" class="character">
+        </div>
+
+        
+
+        <div id="home">
+            <div class="button-row">
+                <button onclick="goCasino()">Ísť do kasína 🎰</button>
+                <button onclick="openSkills()">Skills 🧠</button>
+                <button onclick="openCorruptionMenu()">Corrupt 😈</button>
+            </div>
+        </div>
+    </div>
+
+<div id="skills" style="display:none;">
+    <h1>🧠 Skills</h1>
+
+    <div id="skillsList"></div>
+
+    <button onclick="closeSkills()">Back</button>
+</div>
+
+<div id="corruptionMenu" style="display:none;">
+    <h1>😈 Corruption Actions</h1>
+    <div id="corruptionActions"></div>
+    <button onclick="closeCorruptionMenu()">Back</button>
+</div>
+
+
+<div id="playerInfo">
+    <div class="info-box" id="moneyBox">
+        💰 Money: <span id="moneyAmount">100</span>
+    </div>
+    <div class="info-box" id="levelBox">
+        ⭐ Level: <span id="playerLevel">1</span>
+        <div id="xpToNext">XP to next: <span id="xpRemaining">100</span></div>
+    </div>
+</div>
+
+
+<!-- Casino miestnosť -->
+<div id="casino" style="display:none;">
+    <h1>🎰 Pou Casino 🎰</h1>
+
+    <div id="slot">
+        <div class="reel" id="r1">🍒</div>
+        <div class="reel" id="r2">🍋</div>
+        <div class="reel" id="r3">⭐</div>
+    </div>
+
+    <div id="bet-section">
+    <label for="betAmount">Stávka:</label>
+    <select id="betAmount">
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+        <option value="all">ALL IN</option>
+    </select>
+</div>
+
+
+    <div id="lever" onclick="pullLever()"></div>
+
+    <div id="msg"></div>
+
+    <button onclick="goHome()">Späť domov</button>
+</div>
+
+<script type="module" src="js/casino.js"></script>
+<script type="module" src="js/skills.js"></script>
+<script type="module" src="js/pouLifetime.js"></script>
+<script type="module" src="js/PlayerStats.js"></script>
+<script type="module" src="js/level.js"></script>
+<script type="module" src="js/corruptionActions.js"></script>
+
+</body>
+
+</html>
