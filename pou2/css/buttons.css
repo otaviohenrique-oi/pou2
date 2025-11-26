@@ -1,0 +1,14 @@
+#home, #gameUI {
+    display: flex;
+    flex-direction: column; /* keep vertical stacking of elements */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* space between elements */
+}
+
+/* Row of buttons */
+#home .button-row, #gameUI .button-row {
+    display: flex;
+    flex-direction: row;
+    gap: 15px; /* space between buttons */
+}

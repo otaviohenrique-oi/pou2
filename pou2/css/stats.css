@@ -1,0 +1,20 @@
+#playerInfo {
+    position: fixed;      /* stays in corner */
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;  /* stack boxes vertically */
+    gap: 10px;               /* spacing between boxes */
+    z-index: 1000;           /* above other elements */
+}
+
+.info-box {
+    background: rgba(0,0,0,0.6);  /* semi-transparent black */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    min-width: 120px;
+    text-align: center;
+    box-shadow: 0 0 10px #0005;
+}
