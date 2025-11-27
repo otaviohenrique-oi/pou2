@@ -68,7 +68,31 @@
 <div id="skills" style="display:none;">
     <h1>🧠 Skills</h1>
 
-    <div id="skillsList"></div>
+    <div id="skill-tree-container">
+        <!-- Skill nody s tooltipom -->
+        <button class="skill-node" style="grid-column: 2; grid-row: 1;">
+            Skill A
+            <span class="tooltip-text">Zvyšuje tvoju silu o 10%</span>
+        </button>
+        <button class="skill-node" style="grid-column: 1; grid-row: 2;">
+            Skill B
+            <span class="tooltip-text">Zvyšuje rýchlosť behu</span>
+        </button>
+        <button class="skill-node" style="grid-column: 3; grid-row: 2;">
+            Skill C
+            <span class="tooltip-text">Znižuje spotrebu staminy</span>
+        </button>
+        <button class="skill-node" style="grid-column: 2; grid-row: 3;">
+            Skill D
+            <span class="tooltip-text">Zvyšuje presnosť kopu</span>
+        </button>
+    </div>
+
+    <!-- Detailné okno pre vybraný skill -->
+    <div id="skills-detail" style="display:none; position:absolute; padding:10px; border:3px solid; border-radius:10px; background-color: rgba(0,0,0,0.9); color:white; width:200px; z-index:20;">
+        <h3 id="detail-name">Skill Name</h3>
+        <p id="detail-desc">Skill Description</p>
+    </div>
 
     <button onclick="closeSkills()">Back</button>
 </div>
